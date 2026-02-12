@@ -1,133 +1,135 @@
-# 🚚 FedEx Logistics Shipment Analysis (EDA)
+# 📦 FedEx Logistics Shipment Analysis (Python EDA)
 
-## 📌 Project Overview
-This project performs **Exploratory Data Analysis (EDA)** on a logistics shipment dataset based on a **FedEx business use-case**.  
-The objective is to uncover the root causes of **delivery delays, rising logistics costs, and shipment profitability issues**.
+## 🚀 Project Overview
+This project performs an end-to-end Exploratory Data Analysis (EDA) on FedEx logistics shipment data to uncover delivery delays, cost drivers, and operational inefficiencies.
 
-This project simulates a real-world analytics workflow used in logistics and supply chain analytics.
+The goal is to answer:
+- Why are shipments getting delayed?
+- Does higher shipping cost guarantee faster delivery?
+- Which vendors and countries cause the most delays?
+- How can logistics cost be optimized?
 
 ---
 
 ## 🎯 Business Problem
-
-A global logistics company has observed:
-
-- 📈 Increase in delivery delays  
-- 💰 Rising shipping and fuel costs  
-- 📦 Declining profit per shipment  
-
-Management wants to understand **why this is happening** and how data can help improve operations.
+FedEx wants to improve logistics efficiency by:
+- Reducing delivery delays
+- Optimizing freight costs
+- Improving vendor performance
+- Enabling smarter shipment planning
 
 ---
 
-## 🧠 Project Objectives
+## 📊 Dataset Summary
+- **Total Records:** 10,324 shipments
+- **Total Features:** 33 columns
 
-- Perform data cleaning and preprocessing  
-- Detect data quality issues (missing values, duplicates, outliers)  
-- Analyze delivery performance and shipment trends  
-- Identify cost drivers and loss-making shipments  
-- Provide data-driven business recommendations  
-
----
-
-## 📂 Dataset Description
-
-The analysis uses **5 relational datasets**:
-
-| Dataset | Description |
-|---|---|
-| Shipments | Shipment lifecycle, distance, cost, delivery status |
-| Customers | Customer industry and location |
-| Couriers | Courier vehicle type, rating and experience |
-| Warehouses | Warehouse capacity and operations |
-| Payments | Revenue, discount and payment details |
+Key variables:
+- Shipment Mode
+- Vendor & Country
+- Delivery Dates
+- Shipment Weight
+- Freight Cost & Insurance
+- Product Group
+- Line Item Value
 
 ---
 
-## 🧹 Data Cleaning & Preparation
-
-During EDA, several real-world data issues were discovered and fixed:
-
-- Removed duplicate shipment records  
-- Handled missing pickup dates  
-- Fixed invalid date records (delivery before pickup)  
-- Corrected negative delay values  
-- Treated outliers in shipment distance and weight  
-- Standardized data types and formats  
-
-This ensured **reliable and accurate analysis**.
+## 🛠️ Tech Stack
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
 
 ---
 
-## 📊 Exploratory Analysis
+## 🔎 Project Workflow
 
-### 🚚 Delivery Performance Insights
-- Road transport showed **higher delay risk** than air shipments  
-- Long-distance shipments had **longer delivery times**  
-- Some regions consistently experienced **higher delay rates**
-
-### 💰 Cost & Profitability Insights
-- Strong correlation between **distance, fuel cost and shipping cost**  
-- Identified shipments where **cost exceeded revenue**  
-- Heavy shipments significantly increased logistics cost
-
-### 🏭 Operational Insights
-- Vendor/courier performance influenced delivery delays  
-- Warehouse load and shipment mode affected delivery efficiency
+### 1️⃣ Data Cleaning
+- Converted date columns to datetime
+- Cleaned Freight Cost & Weight columns
+- Handled missing values
+- Created new features:
+  - Delivery Delay
+  - Delivery Status
 
 ---
 
-## 📈 Business Impact
+### 2️⃣ Exploratory Data Analysis
 
-The analysis shows the company can improve operations by:
+#### Univariate Analysis
+- Shipment mode distribution
+- Delivery delay distribution
+- Product group distribution
 
-- Choosing shipment modes strategically  
-- Monitoring vendor performance using KPIs & SLAs  
-- Strengthening logistics in high-delay regions  
-- Reducing shipment weight through packaging optimization  
+#### Bivariate & Multivariate Analysis
+- Shipment mode vs delivery delay
+- Vendor vs delay
+- Country vs delay
+- Weight vs freight cost
+- Insurance vs delay
 
----
-
-## 📌 Strategic Recommendations
-
-### Smart Shipment Strategy
-- ✈️ Air → Urgent & high-priority shipments  
-- 🚢 Ocean → Bulk shipments  
-- 🚚 Road → Regional deliveries  
-
-### Vendor Performance Management
-- Introduce vendor performance KPIs  
-- Audit consistently delayed vendors  
-
-### Regional Logistics Improvement
-- Improve last-mile delivery in high-delay regions  
-- Optimize customs and clearance processes  
-
-### Cost Optimization
-- Consolidate shipments  
-- Reduce packaging weight to cut shipping cost  
+#### Correlation Analysis
+- Identified key cost and delay drivers
 
 ---
 
-## 🛠️ Tools & Technologies
-- Python  
-- Pandas  
-- NumPy  
-- Matplotlib  
-- Seaborn  
-- Jupyter Notebook  
+## 📈 Key Insights
+
+### 🚚 Shipment Insights
+- Air is the most used shipment mode.
+- Air Charter is the most expensive shipping method.
+
+### ⏱️ Delivery Insights
+- Majority shipments are on time.
+- Delays are driven by vendors and destination countries.
+
+### 💰 Cost Insights
+- Higher freight cost does NOT guarantee faster delivery.
+- Significant cost optimization opportunity exists.
+
+### 🌍 High Delay Countries
+- Congo (DRC)
+- Togo
+- Benin
+- Senegal
+- Kenya
+
+### 🏭 Vendor Insights
+Poor vendor performance causes 4–5x more delays.
 
 ---
 
-## 📌 Project Outcome
+## 💡 Business Recommendations
 
-This EDA project demonstrates how data analytics can help logistics companies:
-
-- Reduce delivery delays  
-- Improve operational efficiency  
-- Optimize shipping costs  
-- Support data-driven decision making  
+- Implement vendor performance scorecards
+- Build country risk-based shipment planning
+- Reduce emergency Air Charter shipments
+- Optimize freight cost strategy
+- Build ML model for delay prediction
 
 ---
 
-⭐ If you found this project useful, feel free to star the repository!
+## 📊 Expected Business Impact
+
+| Area | Improvement |
+|------|-------------|
+| Delivery Delay Reduction | 40–60% |
+| Freight Cost Reduction | 15–25% |
+| Vendor Efficiency | Improved |
+| Shipment Planning | Data-Driven |
+
+---
+
+## 📌 Conclusion
+This project demonstrates how data analytics can improve logistics performance, reduce costs, and increase delivery reliability.
+
+---
+
+## 👨‍💻 Author
+**Ajaya Kumar Pradhan**
+
+GitHub: https://github.com/Ajaya210
+
+⭐ If you like this project, please give it a star!
